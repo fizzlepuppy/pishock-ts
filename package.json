@@ -1,0 +1,40 @@
+{
+  "name": "pishock-ts",
+  "version": "1.0.0",
+  "description": "Access the PiShock API with TypeScript.",
+  "private": true,
+  "main": "build/src/api.js",
+  "types": "build/src/api.d.ts",
+  "scripts": {
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "build": "tsc",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "prerun": "npm run compile",
+    "test": "mocha -r ts-node/register src/**/*.test.ts",
+    "posttest": "npm run lint",
+    "coverage": "nyc npm test",
+    "prepublish": "tsc"
+  },
+  "author": "pupfizzle@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "4.2.19",
+    "@types/mocha": "8.2.2",
+    "@types/node": "14.11.2",
+    "@types/node-fetch": "2.5.10",
+    "chai": "4.3.4",
+    "gts": "3.1.0",
+    "mocha": "9.0.1",
+    "nodemon": "2.0.7",
+    "nyc": "15.1.0",
+    "ts-loader": "9.2.3",
+    "ts-node": "10.0.0",
+    "typescript": "4.0.3"
+  },
+  "dependencies": {
+    "node-fetch": "2.6.1"
+  }
+}
