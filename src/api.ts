@@ -13,7 +13,6 @@ export class API {
     duration: number,
     intensity: number
   ): Promise<string> {
-    // Example: curl -d '{"Username":"puppy73","Name":"TG_Bot_Script","Code":"17519CD8GAP","Intensity":"6","Duration":"1","Apikey":"5c678926-d19e-4f86-42ad-21f5a76126db","Op":"0"}' -H 'Content-Type: application/json' https://do.pishock.com/api/apioperate
     return NetworkManager.post(auth, {
       Intensity: `${intensity}`,
       Duration: `${duration}`,
@@ -33,7 +32,6 @@ export class API {
     duration: number,
     intensity: number
   ): Promise<string> {
-    //Example: curl -d '{"Username":"puppy73","Name":"TG_Bot_Test","Code":"17519CD8GAP","Intensity":"50","Duration":"1","Apikey":"5c678926-d19e-4f86-42ad-21f5a76126db","Op":"1"}' -H 'Content-Type: application/json' https://do.pishock.com/api/apioperate
     return NetworkManager.post(auth, {
       Intensity: `${intensity}`,
       Duration: `${duration}`,
@@ -47,7 +45,6 @@ export class API {
    * @param duration  An integer representing the number of seconds to make the device beep.
    */
   static async beep(auth: Auth, duration: number): Promise<string> {
-    // Example: curl -d '{"Username":"puppy73","Name":"TG_Bot_Test","Code":"17519CD8GAP","Duration":"3","Apikey":"5c678926-d19e-4f86-42ad-21f5a76126db","Op":"2"}' -H 'Content-Type: application/json' https://do.pishock.com/api/apioperate
     return NetworkManager.post(auth, {
       Duration: `${duration}`,
       Op: "2",
